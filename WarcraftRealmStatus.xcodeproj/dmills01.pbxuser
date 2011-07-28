@@ -1,0 +1,304 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* WarcraftRealmStatusAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 621}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 363}";
+		};
+	};
+	1D3623250D0F684500981E51 /* WarcraftRealmStatusAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 1079}}";
+			sepNavSelRange = "{621, 0}";
+			sepNavVisRange = "{0, 1654}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* WarcraftRealmStatus */ = {
+		activeExec = 0;
+		executables = (
+			EDCEC11D13E1A77C00391C14 /* WarcraftRealmStatus */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = EDCEC11D13E1A77C00391C14 /* WarcraftRealmStatus */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* WarcraftRealmStatus */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* WarcraftRealmStatus */,
+		);
+		codeSenseManager = EDCEC12213E1A79B00391C14 /* Code sense */;
+		executables = (
+			EDCEC11D13E1A77C00391C14 /* WarcraftRealmStatus */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					752,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 333574233;
+			PBXWorkspaceStateSaveDate = 333574233;
+		};
+		perUserProjectItems = {
+			EDCEC16F13E1B17900391C14 /* PBXTextBookmark */ = EDCEC16F13E1B17900391C14 /* PBXTextBookmark */;
+			EDCEC23713E2081900391C14 /* PBXTextBookmark */ = EDCEC23713E2081900391C14 /* PBXTextBookmark */;
+			EDCEC23813E2081900391C14 /* PBXTextBookmark */ = EDCEC23813E2081900391C14 /* PBXTextBookmark */;
+			EDCEC23913E2081900391C14 /* PBXTextBookmark */ = EDCEC23913E2081900391C14 /* PBXTextBookmark */;
+			EDCEC23A13E2081900391C14 /* PBXTextBookmark */ = EDCEC23A13E2081900391C14 /* PBXTextBookmark */;
+			EDCEC23B13E2081900391C14 /* PBXTextBookmark */ = EDCEC23B13E2081900391C14 /* PBXTextBookmark */;
+			EDCEC23C13E2081900391C14 /* PBXTextBookmark */ = EDCEC23C13E2081900391C14 /* PBXTextBookmark */;
+			EDCEC23D13E2081900391C14 /* PBXTextBookmark */ = EDCEC23D13E2081900391C14 /* PBXTextBookmark */;
+			EDCEC23E13E2081900391C14 /* PBXTextBookmark */ = EDCEC23E13E2081900391C14 /* PBXTextBookmark */;
+			EDCEC23F13E2081900391C14 /* PBXTextBookmark */ = EDCEC23F13E2081900391C14 /* PBXTextBookmark */;
+			EDCEC24013E2081900391C14 /* PBXTextBookmark */ = EDCEC24013E2081900391C14 /* PBXTextBookmark */;
+			EDCEC24213E20C7500391C14 /* PBXTextBookmark */ = EDCEC24213E20C7500391C14 /* PBXTextBookmark */;
+		};
+		sourceControlManager = EDCEC12113E1A79B00391C14 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 621}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 373}";
+		};
+	};
+	32CA4F630368D1EE00C91783 /* WarcraftRealmStatus_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 621}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 207}";
+		};
+	};
+	EDCEC11D13E1A77C00391C14 /* WarcraftRealmStatus */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = WarcraftRealmStatus;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	EDCEC12113E1A79B00391C14 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	EDCEC12213E1A79B00391C14 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	EDCEC14213E1A93700391C14 /* SBJsonBase.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 1001}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1849}";
+		};
+	};
+	EDCEC14E13E1A96300391C14 /* RealmViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {930, 621}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 251}";
+		};
+	};
+	EDCEC14F13E1A96300391C14 /* RealmViewController.m */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{3587, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{3638, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{3688, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 4389}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 2262}}";
+			sepNavSelRange = "{1330, 0}";
+			sepNavVisRange = "{815, 1440}";
+		};
+	};
+	EDCEC16F13E1B17900391C14 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EDCEC14213E1A93700391C14 /* SBJsonBase.m */;
+		name = "SBJsonBase.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1849;
+		vrLoc = 0;
+	};
+	EDCEC20F13E1F22100391C14 /* RealmViewControllerDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {930, 621}}";
+			sepNavSelRange = "{274, 0}";
+			sepNavVisRange = "{0, 286}";
+		};
+	};
+	EDCEC21013E1F22100391C14 /* RealmViewControllerDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {930, 621}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 259}";
+		};
+	};
+	EDCEC21413E1F25E00391C14 /* RealmViewControllerDataSource.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {930, 621}}";
+			sepNavSelRange = "{280, 0}";
+			sepNavVisRange = "{0, 292}";
+		};
+	};
+	EDCEC21513E1F25E00391C14 /* RealmViewControllerDataSource.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {930, 621}}";
+			sepNavSelRange = "{342, 0}";
+			sepNavVisRange = "{0, 349}";
+		};
+	};
+	EDCEC23713E2081900391C14 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* WarcraftRealmStatusAppDelegate.m */;
+		name = "WarcraftRealmStatusAppDelegate.m: 24";
+		rLen = 0;
+		rLoc = 621;
+		rType = 0;
+		vrLen = 1654;
+		vrLoc = 0;
+	};
+	EDCEC23813E2081900391C14 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 373;
+		vrLoc = 0;
+	};
+	EDCEC23913E2081900391C14 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* WarcraftRealmStatus_Prefix.pch */;
+		name = "WarcraftRealmStatus_Prefix.pch: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 207;
+		vrLoc = 0;
+	};
+	EDCEC23A13E2081900391C14 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EDCEC14F13E1A96300391C14 /* RealmViewController.m */;
+		name = "RealmViewController.m: 62";
+		rLen = 0;
+		rLoc = 1330;
+		rType = 0;
+		vrLen = 1440;
+		vrLoc = 815;
+	};
+	EDCEC23B13E2081900391C14 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* WarcraftRealmStatusAppDelegate.h */;
+		name = "WarcraftRealmStatusAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 363;
+		vrLoc = 0;
+	};
+	EDCEC23C13E2081900391C14 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EDCEC14E13E1A96300391C14 /* RealmViewController.h */;
+		name = "RealmViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 251;
+		vrLoc = 0;
+	};
+	EDCEC23D13E2081900391C14 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EDCEC21013E1F22100391C14 /* RealmViewControllerDelegate.m */;
+		name = "RealmViewControllerDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 259;
+		vrLoc = 0;
+	};
+	EDCEC23E13E2081900391C14 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EDCEC20F13E1F22100391C14 /* RealmViewControllerDelegate.h */;
+		name = "RealmViewControllerDelegate.h: 12";
+		rLen = 0;
+		rLoc = 274;
+		rType = 0;
+		vrLen = 286;
+		vrLoc = 0;
+	};
+	EDCEC23F13E2081900391C14 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EDCEC21413E1F25E00391C14 /* RealmViewControllerDataSource.h */;
+		name = "RealmViewControllerDataSource.h: 12";
+		rLen = 0;
+		rLoc = 280;
+		rType = 0;
+		vrLen = 292;
+		vrLoc = 0;
+	};
+	EDCEC24013E2081900391C14 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EDCEC21513E1F25E00391C14 /* RealmViewControllerDataSource.m */;
+		name = "RealmViewControllerDataSource.m: 13";
+		rLen = 0;
+		rLoc = 343;
+		rType = 0;
+		vrLen = 265;
+		vrLoc = 0;
+	};
+	EDCEC24213E20C7500391C14 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EDCEC21513E1F25E00391C14 /* RealmViewControllerDataSource.m */;
+		name = "RealmViewControllerDataSource.m: 16";
+		rLen = 0;
+		rLoc = 342;
+		rType = 0;
+		vrLen = 349;
+		vrLoc = 0;
+	};
+}
