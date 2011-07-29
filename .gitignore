@@ -1,4 +1,4 @@
 build/
 .DS_Store
 *.xcodeproj
-*.pbxproj
+WarcraftRealmStatus.xcodeproj/project.pbxproj
