@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 
-@interface RealmViewController : UITableViewController {
+@interface RealmViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource> {
 
 }
+
+
 
 @end

@@ -21,8 +21,15 @@
     
     // Override point for customization after application launch.
     RealmViewController *rvc = [[RealmViewController alloc] init];
+	rvc.title = @"WoW Realm Status";
 	
-	[window addSubview:rvc.view];
+	UINavigationController *navcon = [[UINavigationController alloc] init];
+
+	[navcon pushViewController:rvc animated:NO];
+	
+	[window addSubview:navcon.view];
+	
+
 	
     [self.window makeKeyAndVisible];
     

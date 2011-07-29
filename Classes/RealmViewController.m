@@ -15,14 +15,13 @@
 #pragma mark -
 #pragma mark View lifecycle
 
-/*
-- (void)viewDidLoad {
-    [super viewDidLoad];
 
+- (void)viewDidLoad {
+	[super viewDidLoad];	
+	
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-*/
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -58,7 +57,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 
@@ -71,16 +70,38 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"MyTVC";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
-    
+	
     // Configure the cell...
-    
+    cell.textLabel.text = @"Test";
+	NSString *path = @"unknown.png";
+	if (indexPath.section == 0)
+		path = @"online.png";
+	else {
+		path = @"offline.png";
+	}
+
+	cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:path]];
+	
     return cell;
+	[path release];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+	if (section == 0) {
+		return @"Online";
+	} else if (section == 1) {
+		return @"Offline";
+	} else {
+		return @"Unknown";
+	}
+
 }
 
 
