@@ -11,7 +11,15 @@
 
 @implementation RealmViewControllerDataSource
 
--(void) tableView:(UITableView *)sender cellForRowAtIndexPath:(NSString *)path
+-(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)path
+{
+}
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section
+{
+}
+
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
 {
 }
 
