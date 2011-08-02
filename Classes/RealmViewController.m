@@ -7,6 +7,7 @@
 //
 
 #import "RealmViewController.h"
+#import "RealmDetailViewController.h"
 
 
 @implementation RealmViewController
@@ -86,7 +87,8 @@
 		path = @"offline.png";
 	}
 
-	cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:path]];
+	cell.imageView.image = [UIImage imageNamed:path];
+	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	
     return cell;
 	[path release];
@@ -150,13 +152,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+    
+    RealmDetailViewController *detailViewController = [[RealmDetailViewController alloc] initWithRealm:[[Realm alloc] init]];
     // ...
     // Pass the selected object to the new view controller.
     [self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];
-    */
 }
 
 
