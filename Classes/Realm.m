@@ -11,6 +11,6 @@
 
 @implementation Realm
 
-@synthesize name, slug, queue, population, type, status, test;
+@synthesize name, slug, queue, population, type, status;
 
 @end

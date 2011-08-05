@@ -13,18 +13,16 @@
 	NSString *name;
 	NSString *slug;
 	NSString *population;
-	NSString *queue;
-	NSString *status;
+	NSNumber *queue;
+	NSNumber *status;
 	NSString *type;
-	NSString *test;
 }
 
 @property (copy) NSString *name;
 @property (copy) NSString *slug;
 @property (copy) NSString *population;
-@property (copy) NSString *queue;
-@property (copy) NSString *status;
+@property (copy) NSNumber *queue;
+@property (copy) NSNumber *status;
 @property (copy) NSString *type;
-@property (copy) NSString *test;
 
 @end
