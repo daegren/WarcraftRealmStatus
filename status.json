@@ -11,7 +11,7 @@
     {
       "type":"pve",
       "queue":false,
-      "status":true,
+      "status":false,
       "population":"high",
       "name":"Aerie Peak",
       "slug":"aerie-peak"
