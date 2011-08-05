@@ -9,10 +9,16 @@
 #import <UIKit/UIKit.h>
 
 
-@interface RealmViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource> {
-
+@interface RealmViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate> {
+	NSDictionary *_realms;
+	NSArray *_sections;
+	IBOutlet UISearchBar *_searchBar;
 }
 
+- (id)initWithRealms:(NSArray *)newRealms withStyle:(UITableViewStyle)style;
 
+@property (retain) NSDictionary *_realms;
+@property (retain) NSArray *_sections;
+@property (retain) UISearchBar *_searchBar;
 
 @end

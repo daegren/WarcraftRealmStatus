@@ -8,6 +8,8 @@
 
 #import "WarcraftRealmStatusAppDelegate.h"
 #import "RealmViewController.h"
+#import "FavouriteRealmViewController.h"
+#import "RealmManager.h"
 
 @implementation WarcraftRealmStatusAppDelegate
 
@@ -20,14 +22,26 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
-    RealmViewController *rvc = [[RealmViewController alloc] init];
-	rvc.title = @"WoW Realm Status";
+    RealmViewController *rvc = [[RealmViewController alloc] initWithRealms:[RealmManager getAllRealms] 
+																 withStyle:UITableViewStylePlain];
+	rvc.title = @"Realm Status";
+	rvc.tabBarItem = [[UITabBarItem alloc] initWithTitle:rvc.title image:[UIImage imageNamed:@"online.png"] tag:0];
 	
 	UINavigationController *navcon = [[UINavigationController alloc] init];
-
 	[navcon pushViewController:rvc animated:NO];
 	
-	[window addSubview:navcon.view];
+	FavouriteRealmViewController *frvc = [[FavouriteRealmViewController alloc] initWithStyle:UITableViewStylePlain];
+	frvc.title = @"Favourites";
+	frvc.tabBarItem	= [[UITabBarItem alloc] initWithTitle:frvc.title image:[UIImage imageNamed:@"offline.png"] tag:1];
+	
+	UINavigationController *nc = [[UINavigationController alloc] init];
+	[nc pushViewController:frvc animated:NO];
+	
+	UITabBarController *tabcon = [[UITabBarController alloc] init];
+	tabcon.viewControllers = [NSArray arrayWithObjects:navcon, nc, nil];
+	
+	
+	[window addSubview:tabcon.view];
 	
 
 	
