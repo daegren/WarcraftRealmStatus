@@ -15,9 +15,7 @@
 + (NSArray *)getAllRealms;
 + (NSArray *)getAllRealmsFromRealmFile:(NSString *)path;
 + (Realm *)getRealm:(NSString *)realmName;
-+ (Realm *)getRealm:(NSString	*)realmName fromRealmFile:(NSString *)path;
 + (NSArray *)getRealms:(NSArray *)realms;
-+ (NSArray *)getRealms:(NSArray *)realms fromRealmFile:(NSString *)path;
 
 
 @end
