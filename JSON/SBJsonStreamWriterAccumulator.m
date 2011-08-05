@@ -1,5 +1,5 @@
 /*
- Copyright (C) 2009,2010 Stig Brautaset. All rights reserved.
+ Copyright (C) 2011 Stig Brautaset. All rights reserved.
  
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -27,74 +27,30 @@
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "SBJsonParser.h"
-#import "SBJsonStreamParser.h"
-#import "SBJsonStreamParserAccumulator.h"
+#import "SBJsonStreamWriterAccumulator.h"
 
-@implementation SBJsonParser
 
-@synthesize maxDepth;
-@synthesize error;
+@implementation SBJsonStreamWriterAccumulator
+
+@synthesize data;
 
 - (id)init {
     self = [super init];
-    if (self)
-        self.maxDepth = 32u;
+    if (self) {
+        data = [[NSMutableData alloc] initWithCapacity:8096u];
+    }
     return self;
 }
 
 - (void)dealloc {
-    [error release];
+    [data release];
     [super dealloc];
 }
 
-#pragma mark Methods
+#pragma mark SBJsonStreamWriterDelegate
 
-- (id)objectWithData:(NSData *)data {
-
-    if (!data) {
-        self.error = @"Input was 'nil'";
-        return nil;
-    }
-
-	SBJsonStreamParserAccumulator *accumulator = [[[SBJsonStreamParserAccumulator alloc] init] autorelease];
-    
-	SBJsonStreamParser *parser = [[[SBJsonStreamParser alloc] init] autorelease];
-	parser.maxDepth = self.maxDepth;
-	parser.delegate = accumulator;
-	
-	switch ([parser parse:data]) {
-		case SBJsonStreamParserComplete:
-            return accumulator.value;
-			break;
-			
-		case SBJsonStreamParserWaitingForData:
-		    self.error = @"Unexpected end of input";
-			break;
-
-		case SBJsonStreamParserError:
-		    self.error = parser.error;
-			break;
-	}
-	
-	return nil;
-}
-
-- (id)objectWithString:(NSString *)repr {
-	return [self objectWithData:[repr dataUsingEncoding:NSUTF8StringEncoding]];
-}
-
-- (id)objectWithString:(NSString*)repr error:(NSError**)error_ {
-	id tmp = [self objectWithString:repr];
-    if (tmp)
-        return tmp;
-    
-    if (error_) {
-		NSDictionary *ui = [NSDictionary dictionaryWithObjectsAndKeys:error, NSLocalizedDescriptionKey, nil];
-        *error_ = [NSError errorWithDomain:@"org.brautaset.SBJsonParser.ErrorDomain" code:0 userInfo:ui];
-	}
-	
-    return nil;
+- (void)writer:(SBJsonStreamWriter *)writer appendBytes:(const void *)bytes length:(NSUInteger)length {
+    [data appendBytes:bytes length:length];
 }
 
 @end
