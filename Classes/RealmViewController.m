@@ -8,47 +8,17 @@
 
 #import "RealmViewController.h"
 #import "RealmDetailViewController.h"
-#import "RealmManager.h"
+
 
 @implementation RealmViewController
 
-@synthesize _realms, _sections, _searchBar;
-
-- (id) initWithRealms:(NSArray *)newRealms withStyle:(UITableViewStyle)style
-{
-	[super initWithNibName:@"RealmViewController" bundle:nil];
-	NSMutableDictionary *realmSections = [[NSMutableDictionary dictionary] retain];
-	NSMutableArray *realmSection;
-	
-	for (Realm *r in newRealms)
-	{
-		NSString *a = [[r.name substringToIndex:1] uppercaseString];
-		
-		if (![realmSections objectForKey:a])
-		{
-			realmSection = [NSMutableArray array]; 
-			[realmSections setValue:realmSection forKey:a];
-		}
-		[realmSection addObject:r];
-	}
-	self._realms = realmSections;
-	return self;
-}
-
-- (NSArray *)_sections
-{
-	if (!_sections) {
-		_sections = [[[self._realms allKeys] sortedArrayUsingSelector:@selector(compare:)] retain];
-	}
-	return _sections;
-}
 
 #pragma mark -
 #pragma mark View lifecycle
 
 
 - (void)viewDidLoad {
-	[super viewDidLoad];
+	[super viewDidLoad];	
 	
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -82,27 +52,19 @@
 }
 */
 
-#pragma mark -
-#pragma mark Search Bar delegate
-
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
-{
-	// run search
-	[searchBar resignFirstResponder];
-}
 
 #pragma mark -
 #pragma mark Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-	return self._sections.count;
+    return 2;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [[self._realms objectForKey:[self._sections objectAtIndex:section]] count];
+    return 10;
 }
 
 
@@ -113,32 +75,35 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
 	
     // Configure the cell...
-	Realm *r = [[_realms objectForKey:[_sections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
-	cell.textLabel.text = r.name;
-	NSString *p;
-	if ([r.status boolValue])
-		p = @"online.png";
-	else if ([r.status intValue] == 0)
-		p = @"offline.png";
-	else 
-		p = @"unknown.png";
-	
-	cell.detailTextLabel.text = [NSString stringWithFormat:@"Population: %@ Type: %@", [r.population capitalizedString], [r.type uppercaseString]];
-			 
-	cell.imageView.image = [UIImage imageNamed:p];
+    cell.textLabel.text = @"Test";
+	NSString *path = @"unknown.png";
+	if (indexPath.section == 0)
+		path = @"online.png";
+	else {
+		path = @"offline.png";
+	}
+
+	cell.imageView.image = [UIImage imageNamed:path];
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	
-    
-	return cell;
+    return cell;
+	[path release];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-	return [_sections objectAtIndex:section];
+	if (section == 0) {
+		return @"Online";
+	} else if (section == 1) {
+		return @"Offline";
+	} else {
+		return @"Unknown";
+	}
+
 }
 
 
@@ -187,9 +152,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-    Realm *r = [[_realms objectForKey:[_sections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
-	
-    RealmDetailViewController *detailViewController = [[RealmDetailViewController alloc] initWithRealm:r];
+    
+    RealmDetailViewController *detailViewController = [[RealmDetailViewController alloc] initWithRealm:[[Realm alloc] init]];
     // ...
     // Pass the selected object to the new view controller.
     [self.navigationController pushViewController:detailViewController animated:YES];
@@ -214,8 +178,6 @@
 
 
 - (void)dealloc {
-	[_realms release];
-	[_sections release];
     [super dealloc];
 }
 

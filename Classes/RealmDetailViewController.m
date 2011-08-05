@@ -30,7 +30,7 @@
 - (id)initWithRealm:(Realm *)newRealm
 {
 	self = [super init];
-		if (self) self.realm = newRealm;
+	if (self) self.realm = newRealm;
 	return self;
 }
 
@@ -38,19 +38,14 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.title = self.realm.name;
-	name.text = self.realm.name;
-	if ([self.realm.status boolValue]) {status.text =  @"Online"; } else {status.text =  @"Offline"; } 
-	NSString *p = @"unknown.png";
-	if ([self.realm.status boolValue])
-		p = @"online.png";
-	else 
-		p = @"offline.png";
-
-	statusImage.image = [UIImage imageNamed:p];
-	population.text = [self.realm.population capitalizedString];
-	realmType.text = [self.realm.type uppercaseString];
-	queue.text = self.realm.queue ? @"None" : @"Yes";
+	self.title = @"Test";
+	name.text = @"Test";
+	status.text = @"Online";
+	statusImage.image = [UIImage imageNamed:@"online.png"];
+	population.text = @"Medium";
+	realmType.text = @"PVP";
+	queue.text = @"None";
+	test.text = [RealmManager getRealm:@"test" fromRealmFile:@"test"].test;
 }
 
 /*
@@ -82,7 +77,7 @@
 
 
 - (void)dealloc {
-	[realm release];
+	[realm dealloc];
     [super dealloc];
 }
 
