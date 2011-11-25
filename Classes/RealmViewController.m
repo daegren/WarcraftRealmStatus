@@ -12,7 +12,7 @@
 
 @implementation RealmViewController
 
-@synthesize _realms, _sections, _searchBar;
+@synthesize _realms, _searchBar;
 
 - (id) initWithRealms:(NSArray *)newRealms withStyle:(UITableViewStyle)style
 {
@@ -20,6 +20,7 @@
 	NSMutableDictionary *realmSections = [[NSMutableDictionary dictionary] retain];
 	NSMutableArray *realmSection;
 	
+    // get all the realm headers ('A', 'B', 'C', etc) leaving out headers which don't have any realms
 	for (Realm *r in newRealms)
 	{
 		NSString *a = [[r.name substringToIndex:1] uppercaseString];

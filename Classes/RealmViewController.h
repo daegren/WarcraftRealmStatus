@@ -18,7 +18,7 @@
 - (id)initWithRealms:(NSArray *)newRealms withStyle:(UITableViewStyle)style;
 
 @property (retain) NSDictionary *_realms;
-@property (retain) NSArray *_sections;
+@property (retain, readonly) NSArray *_sections;
 @property (retain) UISearchBar *_searchBar;
 
 @end
