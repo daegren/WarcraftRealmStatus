@@ -10,9 +10,10 @@
 
 
 @interface FavouriteRealmViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource> {
-	NSMutableArray *_favouriteRealms;
+	NSDictionary *_favouriteRealms;
+    NSArray *_sections;
 }
 
-@property (retain) NSMutableArray *favouriteRealms;
+@property (retain) NSDictionary *favouriteRealms;
 
 @end

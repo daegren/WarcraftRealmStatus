@@ -7,6 +7,7 @@
 //
 
 #import "FavouriteRealmViewController.h"
+#import "RealmDetailViewController.h"
 
 
 @implementation FavouriteRealmViewController
@@ -14,6 +15,14 @@
 @synthesize favouriteRealms;
 
 #pragma mark -
+
+- (NSArray *)_sections {
+    if (!_sections) {
+		_sections = [[[self.favouriteRealms allKeys] sortedArrayUsingSelector:@selector(compare:)] retain];
+	}
+	return _sections;
+}
+
 #pragma mark View lifecycle
 
 /*
@@ -129,14 +138,13 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+    Realm *r = [[_favouriteRealms objectForKey:[_sections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+	
+    RealmDetailViewController *detailViewController = [[RealmDetailViewController alloc] initWithRealm:r];
     // ...
     // Pass the selected object to the new view controller.
     [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-    */
+    [detailViewController release];    
 }
 
 
